@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>馨米兰美甲</title>
+    <meta data-n-head="true" name="keywords" data-hid="keywords" content="美甲,美甲图片,馨米兰,馨米兰美甲,美甲款式,美甲学院,美甲教程,美甲招生,2018美甲新款式,">
+    <meta data-n-head="true" data-hid="description" name="description" content="馨米兰美甲，简单好看的美甲、美甲教程视频、美甲最新款式，首批从事美甲学院服务的企业">
+    <link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/index-m.css">
+    <link rel="stylesheet" type="text/css" href="../images/icon/iconfont.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css">
+</head>
+
+<body>
+    <div class="web-footer sgi hidden-md hidden-lg">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../images/移动端/01.png" alt=""></div>
+                <div class="swiper-slide"><img  src="../images/移动端/02.png" alt=""></div>
+                <div class="swiper-slide"><img  src="../images/移动端/03.png" alt="">
+                    <video class="play" width="100%" height="100%" controls="controls">
+                        <source src="http://piivwkr3y.bkt.clouddn.com/xin.mp4" type="video/mp4">
+                        </source>
+                    </video>
+                </div>
+                <div class="swiper-slide"><img  src="../images/移动端/04.png" alt=""></div>
+                <div class="swiper-slide"><img  src="../images/移动端/05.png" alt=""></div>
+                <div class="swiper-slide">
+                    <a href="javascript:0;" onclick="openShow()"><img  src="../images/移动端/06.png" alt=""></a>
+                </div>
+                <div class="swiper-slide"><img  src="../images/移动端/07.png" alt=""></div>
+                <div class="swiper-slide"><img  src="../images/移动端/08.png" alt=""></div>
+                <div class="swiper-slide"><img  src="../images/移动端/09.png" alt=""></div>
+                <div class="swiper-slide end"><img src="../images/移动端/10.png" alt="">
+                    <div class="banx-h">
+                        <form action="" enctype="multipart/form-data" method="post">
+                            <input type="hidden" name="action" value="post">
+                            <input type="hidden" name="diyid" value="1">
+                            <input type="hidden" name="do" value="2">
+                            <div class="input">
+                                <div class="inp">
+                                    <p>姓名</p>
+                                    <input type="text" name="dy-name" id="dy-name">
+                                </div>
+                                <div class="inp">
+                                    <p>手机</p>
+                                    <input type="text" name="dy-php" id="dy-php">
+                                </div>
+                                <div class="inp">
+                                    <p>微信</p>
+                                    <input type="text" name="fy-weix" id="fy-weix">
+                                </div>
+                                <div class="inp">
+                                    <p>QQ</p>
+                                    <input type="text" name="dy-qq" id="dy-qq">
+                                </div>
+                            </div>
+                            <input type="hidden" name="dede_fields" value="dy-name,text;dy-php,text;fy-weix,text;dy-qq,text">
+                            <input type="hidden" name="dede_fieldshash" value="152d4ad33175703ad649f0da8a3a0207">
+                            <input type="button" onclick="openShow()" name="submit" value="速速抢购" class='shu' />
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    <div id="box">
+        <ul class="toolbar">
+            <li><a href="tel:13419035708" id="telNumber" data-text='13419035708'><i class="iconfont icon-shouji"></i></a></li>
+            <li><a href="javascript:void(0);" data-text='13419035708' id='wxNumber' onclick="copyWx()"><i class="iconfont icon-unie655"></i></a></li>
+            <li><a class="wx" href="javascript:void(0);"><i class="iconfont icon-qrcode-1-copy"></i></a></li><img class="QRCode" style='display:none' src="../images/img.jpg" alt="">
+            <li class="last"><a class="hidden-xs hidden-md" href="tencent://message/?uin=2090542201&Site=&menu=yes"><i
+                        class="iconfont icon-QQ"></i></a>
+                <a class="hidden-md hidden-lg" href="javascript:void" onclick="copyQQ()" id="qqNumber" data-text='2090542201'><i
+                        class="iconfont icon-QQ"></i></a>
+            </li>
+        </ul>
+    </div>
+    <textarea style="opacity: 0;" id="input"></textarea>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js'></script>
+    <script src='../lib/swiper/js/swiper.min.js'></script>
+</body>
+</html>
+<script type='text/javascript'>
+$('#box .wx').on('click', function() {
+    if ($('#box .QRCode').css('display') == 'none') {
+        $('#box .QRCode').fadeIn();
+    } else {
+        $('#box .QRCode').fadeOut();
+    }
+});
+
+function copyText() {
+    var text = $('#telNumber').attr('data-text');
+    var input = document.getElementById("input");
+    input.value = text;
+    input.select();
+    document.execCommand("copy");
+    alert("复制手机号码成功！");
+}
+
+function copyWx() {
+    var text = $('#wxNumber').attr('data-text');
+    var input = document.getElementById("input");
+    input.value = text;
+    input.select();
+    document.execCommand("copy");
+    alert("复制微信号成功！");
+}
+
+function copyQQ() {
+    var text = $('#qqNumber').attr('data-text');
+    var input = document.getElementById("input");
+    input.value = text;
+    input.select();
+    document.execCommand("copy");
+    alert("复制QQ号码成功！");
+}
+</script>
+<script>
+(function(m, ei, q, i, a, j, s) {
+    m[i] = m[i] || function() {
+        (m[i].a = m[i].a || []).push(arguments)
+    };
+    j = ei.createElement(q),
+        s = ei.getElementsByTagName(q)[0];
+    j.async = true;
+    j.charset = 'UTF-8';
+    j.src = 'https://static.meiqia.com/dist/meiqia.js?_=t';
+    s.parentNode.insertBefore(j, s);
+})(window, document, 'script', '_MEIQIA');
+_MEIQIA('entId', 131414);
+
+function openShow() {
+    _MEIQIA('showPanel');
+}
+setTimeout(function() {
+    _MEIQIA('showPanel');
+}, 10000)
+setTimeout(function() {
+    _MEIQIA('showPanel');
+}, 20000)
+setTimeout(function() {
+    _MEIQIA('showPanel');
+}, 35000)
+var swiper = new Swiper('.swiper-container', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+</script>
